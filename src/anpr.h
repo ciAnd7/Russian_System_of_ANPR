@@ -51,9 +51,12 @@ public:
 	
 	void showNormalImage(std::string namewindow);
 	void showLicensePlates();
+    void findPlates(const cv::Mat &img, std::vector<cv::Mat> &plates);
 	void showimage(std::string namewindow, cv::Mat image);
 	
 private:
+
+    void findPlates(std::vector<cv::Mat> &plates_);
     bool findLetters(cv::Mat& src);
 	double getAngle(cv::Mat& plate);
 	void rotateImage(cv::Mat& image, const double angle);
