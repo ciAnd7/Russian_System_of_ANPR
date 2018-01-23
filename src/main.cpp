@@ -20,8 +20,8 @@ int main(int argc, char** argv)
         image = new Anpr;
         image->recognize(img);
 
-        image->saveLicensePlates();
-        image->showLicensePlates();
+//        image->saveLicensePlates();
+//        image->showLicensePlates();
 
         for(auto& x : image->getLicenseText())
             std::cout << x << std::endl;
