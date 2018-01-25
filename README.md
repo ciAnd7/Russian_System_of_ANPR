@@ -1,11 +1,11 @@
 ### ANPR System: The Russian system of automatic number plate recognition
 
-####Dependencies
+#### Dependencies
 * OpenCV >= 2.4.9
 * leptonica >= 1.71
 * Tesseract OCR >= 3.02
 
-####Build (Ubuntu)
+#### Build (Ubuntu)
 * Build dependencies
 
 ```
@@ -38,7 +38,7 @@ g++ *.cpp  -l:libopencv_core.so.2.4.9 -l:libopencv_highgui.so.2.4.9  -l:libopenc
 ```
 
 
-####Screenshot
+#### Screenshot
 
 ![Gittip](http://i.imgur.com/3WfcwvR.png)
 ![Gittip](http://i.imgur.com/jCFUDqF.png)
@@ -46,3 +46,13 @@ g++ *.cpp  -l:libopencv_core.so.2.4.9 -l:libopencv_highgui.so.2.4.9  -l:libopenc
 ![Gittip](http://i.imgur.com/qgbpOto.png)
 ![Gittip](http://i.imgur.com/1XiqEo3.png)
 ![Gittip](http://i.imgur.com/Uv8E4IA.png)
+
+
+### Debian Stretch Headless Build & Run
+
+```
+# apt-get install sudo vim
+$ sudo apt-get install build-essential cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev libopencv-dev libtesseract-dev libleptonica-dev  liblog4cplus-dev libcurl3-dev 
+$ g++ *.cpp  -l:libopencv_core.so.2.4.9 -l:libopencv_highgui.so.2.4.9  -l:libopencv_video.so.2.4.9  -l:libopencv_calib3d.so.2.4.9  -l:libopencv_contrib.so.2.4.9  -l:libopencv_features2d.so.2.4.9  -l:libopencv_flann.so.2.4.9  -l:libopencv_gpu.so.2.4.9  -l:libopencv_imgproc.so.2.4.9  -l:libopencv_legacy.so.2.4.9  -l:libopencv_ml.so.2.4.9  -l:libopencv_objdetect.so.2.4.9  -l:libopencv_ocl.so.2.4.9  -l:libopencv_photo.so.2.4.9   -l:libopencv_stitching.so.2.4.9  -l:libopencv_superres.so.2.4.9  -ltesseract -llept -std=c++11 -o rusalpr
+$ ./rusalpr
+```
